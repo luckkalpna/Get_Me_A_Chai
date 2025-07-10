@@ -83,7 +83,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold text-center capitalize mb-5">
           learn more about us
         </h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ey18PDiaAYI?si=2ilwiR9xuxFTInvJ&amp;start=8679" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ey18PDiaAYI?si=2ilwiR9xuxFTInvJ&amp;start=8679" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
     </>
   );
