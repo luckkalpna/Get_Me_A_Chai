@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import NextAuth from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 // import GoogleProvider from "next-auth/providers/google";
@@ -35,6 +36,14 @@ export const authoptions =  NextAuth({
     //   }
     // })
   ],
+  callbacks: {
+  async signIn({ user, account, profile, email, credentials }) {
+    if(account.provider == "github"){
+      // Connect to the database
+      const client = await mongoose.connect()
+    }
+  }
+}
 });
 
 export { authoptions as GET, authoptions as POST}
