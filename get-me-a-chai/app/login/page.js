@@ -3,10 +3,11 @@ import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
+
 const Login = () => {
   const { data: session } = useSession();
+  const  router = useRouter()
     if (session) {
-      const  router = useRouter()
       router.push("/dashboard")
     }
   return (
@@ -30,9 +31,9 @@ const Login = () => {
               <g
                 id="Icons"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g id="Color-" transform="translate(-401.000000, -860.000000)">
                   <g id="Google" transform="translate(401.000000, 860.000000)">
@@ -82,9 +83,9 @@ const Login = () => {
               <g
                 id="Icons"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="Color-"
@@ -112,9 +113,9 @@ const Login = () => {
               <g
                 id="Icons"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="Color-"
@@ -143,9 +144,9 @@ const Login = () => {
               <g
                 id="Icons"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="Color-"
@@ -163,7 +164,7 @@ const Login = () => {
             <span>Continue with Facebook</span>
           </button>
 
-          <button onClick={()=>{signIn("github")}} className="flex items-center w-80 bg-white border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+          <button onClick={()=>{signIn("github")}} className="flex items-center w-80 bg-white border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 cursor-pointer">
             <svg
               className="h-6 w-6 mr-2"
               xmlns="http://www.w3.org/2000/svg"
@@ -174,19 +175,19 @@ const Login = () => {
               <g
                 id="team-collaboration/version-control/github"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="container"
                   transform="translate(2.000000, 2.000000)"
-                  fill-rule="nonzero"
+                  fillRule="nonzero"
                 >
                   <rect
                     id="mask"
                     stroke="#000000"
-                    stroke-width="2"
+                    strokeWidth="2"
                     fill="#000000"
                     x="-1"
                     y="-1"
@@ -217,9 +218,9 @@ const Login = () => {
               <g
                 id="Page-1"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="Dribbble-Light-Preview"
