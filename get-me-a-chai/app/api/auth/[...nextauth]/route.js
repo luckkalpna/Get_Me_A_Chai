@@ -3,6 +3,8 @@ import NextAuth from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 // import GoogleProvider from "next-auth/providers/google";
 // import CredentialsProvider from "next-auth/providers/credentials";
+import User from "@/models/User";
+import Payment from "@/models/Payment";
 
 
 export const authoptions =  NextAuth({
@@ -41,6 +43,20 @@ export const authoptions =  NextAuth({
     if(account.provider == "github"){
       // Connect to the database
       const client = await mongoose.connect()
+      // Check if the user is already exists in the database
+      const currentUser = User.findOne({email: email})
+      if(!currentUser){
+        // Creaate a new user
+        const newUser = new User({
+          email: email,
+          username: email.split("@")[0]
+        })
+        await newUser.save()
+        user.name = newUser.username
+      }
+      else{
+        user.name = newUser.username
+      }
     }
   }
 }
