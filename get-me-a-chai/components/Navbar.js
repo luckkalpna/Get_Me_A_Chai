@@ -6,6 +6,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 const Navbar = () => {
   const { data: session } = useSession();
   const [showdropdown, setShowdropdown] = useState(false);
+  // console.log(session)
   // if (session) {
   //   return (
   //     <>

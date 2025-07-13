@@ -5,11 +5,12 @@ import { useRouter } from "next/navigation";
 
 
 const Login = () => {
-  const { data: session } = useSession();
   const  router = useRouter()
+  const { data: session } = useSession();
     if (session) {
       router.push("/dashboard")
     }
+    
   return (
     <>
       <div className="container mx-auto py-14 text-white">
